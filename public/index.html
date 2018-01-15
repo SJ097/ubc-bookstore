@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="cartscript.js">  </script>
+<title> UBC Bookstore </title>
+
+</head>
+
+<body>
+
+<div id="content">
+<header id="header">
+<div id="logo"> <img class="resize1" src="Images\UBC Logo.png" alt="UBC LOGO"> </div>
+<div id="welcomeBanner"> <img class="resize2" src="Images\PrimarySignature_ex_768.png" alt="UBC BookStore"></div>
+</header>
+
+<button id="showCart" onclick="showCart()"> Cart ($0) </button>
+
+<div id="myModal" class="modal">
+<div class="modal-content">
+    <span class="close">&times;</span>
+	<h2> Cart </h2>
+	<table id="cartTable" onclick = 'showCart()'>
+		<tr id="total">
+			<td>Total Price</td>
+			<td id="black"></td>
+			<td id="black"></td>
+			<td id="black"></td>
+			<td id="totalPrice"></td>
+		</tr>
+	</table>
+	
+	<button id="checkout"> Checkout </button>
+</div>
+</div>
+ 
+<div id="mainContent">
+
+<div>
+<ul id="navigationMenu">
+  <li>All Items</li>
+  <li>Books</li>
+  <li>Clothing</li>
+  <li>Tech</li>
+  <li>Gifts</li>
+  <li>Stationary</li>
+  <li>Supplies</li>
+</ul>
+</div>  
+
+<div id="productList">
+<div class = "product">  <img class="resize" alt="box_1"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"> </span> <button class="addButton" onclick='addToCart("Box1")'> Add </button> <button class="removeButton" onclick='removeFromCart("Box1")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> Box 1 </div> </div>
+<div class = "product">  <img class="resize" alt="box_2"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"> </span> <button class="addButton"  onclick='addToCart("Box2")'> Add </button> <button class="removeButton" onclick='removeFromCart("Box2")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> Box 2</div> </div>
+<div class = "product">  <img class="resize" alt="clothes_1"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"></span> <button class="addButton" onclick='addToCart("Clothes1")'> Add </button> <button class="removeButton" onclick='removeFromCart("Clothes1")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> Clothes 1 </div> </div>
+<div class = "product">  <img class="resize" alt="clothes_2"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"> </span> <button class="addButton" onclick='addToCart("Clothes2")'> Add </button> <button class="removeButton" onclick='removeFromCart("Clothes2")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> Clothes 2 </div> </div>
+<div class = "product">  <img class="resize" alt="jeans"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"> </span> <button class="addButton" onclick='addToCart("Jeans")'> Add </button> <button class="removeButton" onclick='removeFromCart("Jeans")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> Jeans </div> </div>
+<div class = "product">  <img class="resize" alt="keyboard"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"></span> <button class="addButton" onclick='addToCart("Keyboard")'> Add </button> <button class="removeButton" onclick='removeFromCart("Keyboard")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> Keyboard </div> </div>
+<div class = "product">  <img class="resize" alt="keyboard combo"> <div class="hidden"><img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"> </span> <button class="addButton" onclick='addToCart("KeyboardCombo")'> Add </button> <button class="removeButton" onclick='removeFromCart("KeyboardCombo")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> KeyboardCombo </div> </div>
+<div class = "product">  <img class="resize" alt="mouse"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"> </span> <button class="addButton" onclick='addToCart("Mice")'> Add </button> <button class="removeButton" onclick='removeFromCart("Mice")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> Mouse </div> </div>
+<div class = "product">  <img class="resize" alt="PC_1"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"></span> <button class="addButton" onclick='addToCart("PC1")'> Add </button> <button class="removeButton" onclick='removeFromCart("PC1")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> PC 1 </div> </div>
+<div class = "product">  <img class="resize" alt="PC_2"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"> </span> <button class="addButton" onclick='addToCart("PC2")'> Add </button> <button class="removeButton" onclick='removeFromCart("PC2")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> PC 2 </div> </div>
+<div class = "product">  <img class="resize" alt="PC_3"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"> </span> <button class="addButton" onclick='addToCart("PC3")'> Add </button> <button class="removeButton" onclick='removeFromCart("PC3")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> PC 3</div> </div>
+<div class = "product">  <img class="resize" alt="tent"> <div class="hidden"> <img class ="resizeCart" src="Images\cart.png" alt="Cart"> <span class="costPosition"> </span> <button class="addButton" onclick='addToCart("Tent")'> Add </button> <button class="removeButton" onclick='removeFromCart("Tent")'> Remove </button> </div>  <div class="centered">Out of Stock</div> <div> Tent </div> </div>
+</div>
+</div>
+
+
+
+<footer id="footer" onload="inactiveTime()">
+<div id="timer">300</div>
+</footer>
+
+</div>
+</body>
+
+</html
