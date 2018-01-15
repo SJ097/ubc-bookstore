@@ -1,4 +1,4 @@
-#Web Development Project
+# Web Development Project
 
 - A website for the UBC Bookstore
 - Implements HTML, CSS and JavaScript code to create a modern webpage
